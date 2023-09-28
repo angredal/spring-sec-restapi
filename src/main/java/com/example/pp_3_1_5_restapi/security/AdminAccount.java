@@ -19,7 +19,7 @@ public class AdminAccount {
     private final UserService userService;
     private final RoleService roleService;
 
-    @Autowired
+
     public AdminAccount(UserService userService, RoleService roleService) {
         this.userService = userService;
         this.roleService = roleService;

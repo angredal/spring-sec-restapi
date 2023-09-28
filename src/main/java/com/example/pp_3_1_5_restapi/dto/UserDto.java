@@ -3,7 +3,7 @@ package com.example.pp_3_1_5_restapi.dto;
 import com.example.pp_3_1_5_restapi.models.Role;
 import java.util.Set;
 
-public class UserDTO {
+public class UserDto {
     private Integer id;
 
     private String name;

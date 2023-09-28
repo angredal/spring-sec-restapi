@@ -1,6 +1,6 @@
 package com.example.pp_3_1_5_restapi.services;
 
-import com.example.pp_3_1_5_restapi.dto.UserDTO;
+import com.example.pp_3_1_5_restapi.dto.UserDto;
 import com.example.pp_3_1_5_restapi.models.User;
 import com.example.pp_3_1_5_restapi.reposetories.UsersReposetories;
 import org.modelmapper.ModelMapper;
@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 
     private final ModelMapper mapper;
 
-    @Autowired
+
     public UserServiceImpl(UsersReposetories usersReposetories, PasswordEncoder passwordEncoder, RoleService roleService, ModelMapper mapper) {
         this.usersReposetories = usersReposetories;
         this.passwordEncoder = passwordEncoder;
@@ -60,13 +60,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User convertToUser(UserDTO userDTO) {
+    public User convertToUser(UserDto userDTO) {
         return mapper.map(userDTO, User.class);
     }
 
     @Override
-    public UserDTO convertToDTO(User user) {
-        return mapper.map(user, UserDTO.class);
+    public UserDto convertToDTO(User user) {
+        return mapper.map(user, UserDto.class);
     }
 
 }

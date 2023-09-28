@@ -1,9 +1,7 @@
 package com.example.pp_3_1_5_restapi.dto;
 
 
-import java.util.List;
-
-public class RoleDTO {
+public class RoleDto {
     private Integer id;
     private String role;
 

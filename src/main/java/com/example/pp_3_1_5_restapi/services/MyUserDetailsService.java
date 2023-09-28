@@ -18,7 +18,6 @@ public class MyUserDetailsService implements UserDetailsService {
 
     private final UsersReposetories usersReposetories;
 
-    @Autowired
     public MyUserDetailsService(UsersReposetories usersReposetories) {
         this.usersReposetories = usersReposetories;
     }

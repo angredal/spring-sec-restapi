@@ -1,6 +1,6 @@
 package com.example.pp_3_1_5_restapi.services;
 
-import com.example.pp_3_1_5_restapi.dto.UserDTO;
+import com.example.pp_3_1_5_restapi.dto.UserDto;
 import com.example.pp_3_1_5_restapi.models.User;
 
 import java.util.*;
@@ -18,8 +18,8 @@ public interface UserService {
 
     Optional<User> userByUsername(String username);
 
-    User convertToUser(UserDTO userDTO);
+    User convertToUser(UserDto userDTO);
 
-    UserDTO convertToDTO(User user);
+    UserDto convertToDTO(User user);
 
 }

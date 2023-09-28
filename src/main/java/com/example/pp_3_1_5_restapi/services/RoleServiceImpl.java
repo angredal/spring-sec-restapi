@@ -1,6 +1,6 @@
 package com.example.pp_3_1_5_restapi.services;
 
-import com.example.pp_3_1_5_restapi.dto.RoleDTO;
+import com.example.pp_3_1_5_restapi.dto.RoleDto;
 import com.example.pp_3_1_5_restapi.models.Role;
 import com.example.pp_3_1_5_restapi.reposetories.RolesReposetories;
 import org.modelmapper.ModelMapper;
@@ -16,7 +16,7 @@ public class RoleServiceImpl implements RoleService {
     private final RolesReposetories rolesReposetories;
     private final ModelMapper mapper;
 
-    @Autowired
+
     public RoleServiceImpl(RolesReposetories rolesReposetories, ModelMapper mapper) {
         this.rolesReposetories = rolesReposetories;
         this.mapper = mapper;
@@ -30,13 +30,13 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public Role convertToRole(RoleDTO roleDTO) {
+    public Role convertToRole(RoleDto roleDTO) {
         return mapper.map(roleDTO, Role.class);
     }
 
     @Override
-    public RoleDTO convertToRoleDTO(Role role) {
-        return mapper.map(role, RoleDTO.class);
+    public RoleDto convertToRoleDTO(Role role) {
+        return mapper.map(role, RoleDto.class);
     }
 
 }
